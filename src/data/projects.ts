@@ -5,9 +5,20 @@ export type Project = {
   description: Localized;
   image: string;
   tech: string[];
+  repo?: string;
 };
 
 export const projects: Project[] = [
+  {
+    title: { en: "German Energy Market Data Pipeline", de: "Datenpipeline für den deutschen Strommarkt" },
+    description: {
+      en: "Automated ETL pipeline for hourly German electricity data from the SMARD API: cleans and validates prices and solar/wind generation, upserts into PostgreSQL and an S3 data lake queryable with Glue and Athena, runs daily on AWS Lambda, and feeds a Streamlit dashboard with an LLM-generated market summary.",
+      de: "Automatisierte ETL-Pipeline für stündliche deutsche Strommarktdaten aus der SMARD-API: bereinigt und validiert Preise sowie Solar- und Winderzeugung, speichert sie per Upsert in PostgreSQL und einem S3-Data-Lake (abfragbar mit Glue und Athena), läuft täglich auf AWS Lambda und speist ein Streamlit-Dashboard mit einer LLM-generierten Marktzusammenfassung.",
+    },
+    image: "/images/projects/energy-data-pipeline.svg",
+    tech: ["Python", "pandas", "PostgreSQL", "AWS Lambda", "S3", "Athena", "Streamlit", "pytest"],
+    repo: "https://github.com/rk-420/data-pipeline",
+  },
   {
     title: { en: "EduMed — Medical Dashboard", de: "EduMed — Medizinisches Dashboard" },
     description: {

@@ -36,6 +36,7 @@ const en = {
     screenshot: "screenshot",
     showMore: "Show more projects",
     showFewer: "Show fewer projects",
+    viewCode: "View code on GitHub",
   },
   focus: {
     eyebrow: "Current Focus",
@@ -100,6 +101,7 @@ const de: Dictionary = {
     heading: "Projekte",
     intro: "Eine Auswahl meiner Arbeiten — von Full-Stack-Anwendungen bis zu kleinen Experimenten.",
     screenshot: "Screenshot",
+    viewCode: "Code auf GitHub ansehen",
     showMore: "Mehr Projekte anzeigen",
     showFewer: "Weniger Projekte anzeigen",
   },

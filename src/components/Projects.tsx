@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { projects } from "@/data/projects";
+import { GitHubIcon } from "@/components/icons";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -37,6 +38,17 @@ export default function Projects({ lang }: { lang: Locale }) {
             <div className="flex flex-1 flex-col gap-3 p-6">
               <h3 className="text-lg font-semibold text-foreground">{project.title[lang]}</h3>
               <p className="text-sm text-muted">{project.description[lang]}</p>
+              {project.repo && (
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex w-fit items-center gap-1.5 text-sm font-medium text-accent hover:underline"
+                >
+                  <GitHubIcon className="h-4 w-4" />
+                  {t.viewCode}
+                </a>
+              )}
               <div className="mt-auto flex flex-wrap gap-2 pt-2">
                 {project.tech.map((tech) => (
                   <span
